@@ -20,6 +20,12 @@ do {
           }
         }
         alert(`Su array contiene ${arrayOfInputs.length} elementos: ${arrayOfInputs.join(', ')}`);
+        let list = document.getElementById('list');
+        arrayOfInputs.forEach(input => {
+          let word = document.createElement('li');
+          word.innerHTML = input;
+          list.appendChild(word);
+        })
         askAgain = false;
       }
       break;
